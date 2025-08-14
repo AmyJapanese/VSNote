@@ -1,5 +1,7 @@
 # VSCodian Theme
 
+![VSCodian Theme Thumbnail](Assets/Thumbnail.png)
+
 > **Disclaimer:** This is an **unofficial** Obsidian theme inspired by Visual Studio Code.  
 > It is not affiliated with or endorsed by Microsoft or the Visual Studio Code team.
 
