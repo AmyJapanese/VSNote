@@ -1,0 +1,240 @@
+/*******************************************************************************  
+ VSCODIAN
+*******************************************************************************/
+
+/* ========== 1) Design tokens ========== */
+:root {
+  /* アクセント（VS Code の水色）: これだけ変えれば全体が連動 */
+  --interactive-accent: #3794ff;
+  --interactive-accent-hover: #5aa7ff;
+
+  /* フォント（UI/本文 と 等幅。日本語フォールバック付き） */
+  --vsc-ui-font: "Segoe WPC","Segoe UI","Yu Gothic UI","Meiryo",
+                 "Noto Sans JP","Hiragino Kaku Gothic ProN",
+                 Roboto,Ubuntu,Arial,"Helvetica Neue",system-ui,sans-serif;
+  --vsc-code-font: "Cascadia Code","Fira Code","Consolas",
+                   "SFMono-Regular","Menlo","Monaco",
+                   "Source Code Pro","Noto Sans Mono",
+                   "Courier New",monospace;
+
+  /* ステータスバー高さ（スクロール余白もこれで連動） */
+  --statusbar-h: 24px;
+}
+
+/* ダーク配色（VS Code Dark+ 近似） */
+.theme-dark {
+  --vsc-activitybar-bg: #2b2b2b;   /* 左リボン/上帯の濃い面 */
+  --vsc-sidebar-bg:     #252526;   /* サイドバー面 */
+  --vsc-editor-bg:      #1e1e1e;   /* エディタ面 */
+  --vsc-border:         #3c3c3c;
+  --vsc-fore:           #d4d4d4;
+  --vsc-muted:          #b3b3b3;
+
+  --background-primary: var(--vsc-editor-bg);
+  --background-secondary: var(--vsc-sidebar-bg);
+  --background-modifier-border: var(--vsc-border);
+  --text-normal: var(--vsc-fore);
+  --text-muted: var(--vsc-muted);
+}
+
+/* ライト配色（VS Code Light+ 近似） */
+.theme-light {
+  --vsc-activitybar-bg: #f3f3f3;   /* 上帯/リボンの明るい面 */
+  --vsc-sidebar-bg:     #f6f6f6;   /* サイドバー面 */
+  --vsc-editor-bg:      #ffffff;   /* エディタ面 */
+  --vsc-border:         #e5e5e5;
+  --vsc-fore:           #333333;
+  --vsc-muted:          #555555;
+
+  --background-primary: var(--vsc-editor-bg);
+  --background-secondary: var(--vsc-sidebar-bg);
+  --background-modifier-border: var(--vsc-border);
+  --text-normal: var(--vsc-fore);
+  --text-muted: var(--vsc-muted);
+}
+
+/* 全体のフォント適用 */
+body {
+  --font-interface: var(--vsc-ui-font);
+  --font-text:      var(--vsc-ui-font);
+  --font-monospace: var(--vsc-code-font);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* ========== 2) App chrome（帯やリボン） ========== */
+.workspace-ribbon.mod-left {           /* 左アクティビティバー */
+  width: 52px;
+  background: var(--vsc-activitybar-bg);
+  border-right: 1px solid var(--vsc-border);
+}
+.workspace-ribbon.mod-right {
+  background: var(--vsc-activitybar-bg);
+  border-left: 1px solid var(--vsc-border);
+}
+.workspace-ribbon.mod-top {            /* 上の細い帯（モードアイコンが乗る） */
+  background: var(--vsc-activitybar-bg);
+  border-bottom: 1px solid var(--vsc-border);
+}
+
+/* リボン内のアイコン：通常グレー／ホバーで青 */
+.workspace-ribbon .side-dock-actions {
+  display: flex; gap: 6px; padding: 8px 6px;
+  flex-direction: column;
+}
+.workspace-ribbon.mod-top .side-dock-actions {   /* 上帯の場合は横並びの環境が多い */
+  flex-direction: row; padding: 6px 8px;
+}
+.side-dock-actions .clickable-icon {
+  color: var(--text-muted);
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px;
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  transition: color .12s ease, background .12s ease;
+}
+.side-dock-actions .clickable-icon:hover {
+  color: var(--interactive-accent);
+  background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+}
+.side-dock-actions .clickable-icon:active {
+  background: color-mix(in srgb, var(--interactive-accent) 20%, transparent);
+}
+/* SVG は線画を壊さない */
+.side-dock-actions .clickable-icon svg { fill:none; stroke:currentColor; stroke-width:1.5; vector-effect:non-scaling-stroke; }
+.side-dock-actions .clickable-icon svg [fill]:not([fill="none"]) { fill: currentColor; }
+
+/* 上帯の“モード切替アイコン”にアクティブ下線（VS Code 風） */
+.workspace-tab-header.is-active,
+.view-header { border-bottom: 2px solid var(--interactive-accent); }
+
+/* ========== 3) Tabs（四角＆下線） ========== */
+.workspace-tab-header-container {
+  background: var(--vsc-activitybar-bg);
+  border-bottom: 1px solid var(--vsc-border);
+}
+.workspace-tab-header {
+  position: relative;
+  background: transparent;
+  border-radius: 0;                 /* タブだけ角を落とす */
+  box-shadow: none;
+  margin: 0;
+  border-right: 1px solid var(--vsc-border);
+}
+.workspace-tab-header:last-child { border-right: none; }
+
+/* ダーク/ライトで非アクティブ/アクティブの面色 */
+.theme-dark .workspace-tab-header { background:#2d2d2d; }
+.theme-dark .workspace-tab-header.is-active { background:#1e1e1e; }
+.theme-light .workspace-tab-header { background:#ffffff; }
+.theme-light .workspace-tab-header.is-active { background:#e5e5e5; }
+
+/* ラベル色（可読性重視） */
+.theme-dark .workspace-tab-header-inner-title { color:#ccc; }
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title { color:#fff; }
+.theme-light .workspace-tab-header-inner-title { color:#333; }
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title { color:#111; font-weight:500; }
+
+/* 下線（アクティブ） */
+.workspace-tab-header.is-active::after {
+  content:""; position:absolute; left:0; right:0; bottom:0;
+  height:2px; background: var(--interactive-accent);
+}
+
+/* タブのホバー */
+.workspace-tab-header:hover:not(.is-active) {
+  background: color-mix(in srgb, var(--interactive-accent) 10%, transparent);
+}
+
+/* ========== 4) Status bar（横いっぱい・重なり事故ゼロ） ========== */
+/* 本体は透明にして、画面端までの背景はアプリに擬似要素で描く */
+.status-bar {
+  background: transparent;
+  position: relative;
+  height: var(--statusbar-h);
+  line-height: var(--statusbar-h);
+  border-top: none;
+  border-radius: 0;
+  z-index: 2;                       /* 背景帯（z:1）より前、他UIは自然と上に出る */
+}
+.app-container::after {
+  content: "";
+  position: fixed; left:0; right:0; bottom:0;
+  height: var(--statusbar-h);
+  background: var(--interactive-accent);
+  z-index: 1;
+  pointer-events: none;
+}
+.status-bar .status-bar-item { color:#fff; }
+/* コンテンツ最下行が隠れないように */
+.markdown-reading-view, .markdown-source-view, .cm-editor {
+  scroll-padding-bottom: calc(var(--statusbar-h) + 8px);
+}
+
+/* ========== 5) Explorer（ファイルツリー VS Code 風） ========== */
+:root{
+  --vsc-explorer-row-h: 26px;
+  --vsc-explorer-indent: 12px;
+  --vsc-explorer-hover: color-mix(in srgb, var(--interactive-accent) 10%, transparent);
+  --vsc-explorer-active-bg-dark: #37373d;
+  --vsc-explorer-active-bg-light: #e8f2ff;
+}
+.nav-files-container { background: var(--background-secondary); }
+.nav-file-title, .nav-folder-title {
+  height: var(--vsc-explorer-row-h);
+  line-height: var(--vsc-explorer-row-h);
+  padding: 0 8px;
+  color: var(--text-normal);
+  border-radius: 4px;
+}
+.nav-folder-title { font-weight: 600; }
+.nav-file-title:hover, .nav-folder-title:hover { background: var(--vsc-explorer-hover); }
+/* アクティブ背景＋左アクセントバー */
+.theme-dark .nav-file.is-active > .nav-file-title,
+.theme-dark .nav-folder.is-active > .nav-folder-title { background: var(--vsc-explorer-active-bg-dark); }
+.theme-light .nav-file.is-active > .nav-file-title,
+.theme-light .nav-folder.is-active > .nav-folder-title { background: var(--vsc-explorer-active-bg-light); }
+.nav-file.is-active > .nav-file-title::before,
+.nav-folder.is-active > .nav-folder-title::before {
+  content:""; position:absolute; left:0; top:0; bottom:0; width:2px;
+  background: var(--interactive-accent); border-radius: 1px;
+}
+/* インデントガイド */
+.tree-item-children { border-left: 1px solid var(--background-modifier-border);
+  margin-left: var(--vsc-explorer-indent); padding-left: 6px; }
+/* アイコンは currentColor で描画 */
+.nav-file-title .nav-file-title-content svg,
+.nav-folder-title .nav-folder-title-content svg {
+  width: 16px; height: 16px; margin-right: 6px;
+  fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke;
+}
+.nav-file-title .nav-file-title-content svg [fill]:not([fill="none"]),
+.nav-folder-title .nav-folder-title-content svg [fill]:not([fill="none"]) { fill: currentColor; }
+
+/* ========== 6) Headings（見出しを等幅＆コードっぽく） ========== */
+:root { --vsc-heading-font: var(--vsc-code-font); }
+.markdown-reading-view h1, .markdown-reading-view h2, .markdown-reading-view h3,
+.markdown-reading-view h4, .markdown-reading-view h5, .markdown-reading-view h6 {
+  font-family: var(--vsc-heading-font);
+  font-weight: 600; line-height: 1.3; letter-spacing: 0;
+}
+.markdown-source-view .cm-header,
+.markdown-source-view .cm-line .cm-header,
+.markdown-source-view .HyperMD-header,
+.markdown-source-view .cm-formatting-header {
+  font-family: var(--vsc-heading-font);
+  font-weight: 600;
+}
+/* （任意）読み取りビューのサイズを控えめにしてコードコメント風 */
+.markdown-reading-view h1 { font-size: 1.6rem; }
+.markdown-reading-view h2 { font-size: 1.4rem; }
+.markdown-reading-view h3 { font-size: 1.25rem; }
+.markdown-reading-view h4 { font-size: 1.1rem; }
+.markdown-reading-view h5 { font-size: 1.0rem; }
+.markdown-reading-view h6 { font-size: 0.95rem; }
+
+/* タグも等幅フォントにする */
+a.tag,
+.cm-hashtag {
+  font-family: var(--vsc-code-font);
+}
