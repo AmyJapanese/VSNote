@@ -28,6 +28,8 @@ combining the productivity of your favorite editor with the note-taking power of
   - RGB: (0, 122, 204)
 - The theme is designed for Obsidian’s built-in theme installer (“Community Themes”) —  
   no manual installation instructions are provided here.
+- “VScodian” is derived from “VS Code” + the suffix “-ian”.
+  It is not related to Obsidian or its official branding.
 - Works best with the default Obsidian UI layout.  
   Some heavily customized plugin layouts may need additional CSS adjustments.
 
