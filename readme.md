@@ -23,16 +23,6 @@ combining the productivity of your favorite editor with the note-taking power of
 - Full reproduction of VS Code's square scrollbars is not possible due to Obsidian's reliance on native system scrollbars.  
 - This theme provides similar colors and overall feel, but scrollbar appearance may vary depending on your operating system.
 
-### Screenshots
-
-#### Dark Mode
-
-![VSNote Dark Mode Screenshot](Assets/darkmode.png)
-
-#### Light Mode
-
-![VSNote Light Mode Screenshot](Assets/lightmode.png)
-
 ### Notes
 
 - Accent color defaults to Obsidian’s standard purple.  
@@ -50,6 +40,16 @@ combining the productivity of your favorite editor with the note-taking power of
 This theme uses Obsidian's built-in accent color system.  
 Scrollbar colors and highlights follow the accent color you select in **Settings → Appearance → Accent color**.  
 Direct CSS editing is not required or recommended.
+
+### Screenshots
+
+#### Dark Mode
+
+![VSNote Dark Mode Screenshot](Assets/darkmode.png)
+
+#### Light Mode
+
+![VSNote Light Mode Screenshot](Assets/lightmode.png)
 
 ### 📜 License
 
