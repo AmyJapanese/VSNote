@@ -19,6 +19,9 @@
 
   /* ステータスバー高さ（スクロール余白もこれで連動） */
   --statusbar-h: 24px;
+  --scrollbar-bg: #1e1e1e;       /* 溝の色 */
+  --scrollbar-thumb-bg: #424242; /* つまみの色 */
+  --scrollbar-active-thumb-bg: #5a5a5a; /* hover時のつまみ */
 }
 
 /* ダーク配色（VS Code Dark+ 近似） */
@@ -239,21 +242,6 @@ a.tag,
   font-family: var(--vsc-code-font);
 }
 
-/* 縦横スクロールバー全体 */
-::-webkit-scrollbar {
-  width: 12px;   /* 横スクロールは高さになる */
-  height: 12px;
-  background: #1e1e1e; /* VSCodeっぽい背景色 */
-}
-
-/* つまみ部分 */
-::-webkit-scrollbar-thumb {
-  background-color: #424242;
-  border-radius: 0;         /* 四角に固定 */
-  border: 2px solid #1e1e1e; /* 背景と同じ色で枠を作ってVSCodeっぽく */
-}
-
-/* スクロールバーの溝部分 */
-::-webkit-scrollbar-track {
-  background: #1e1e1e;
+.scrollbar {
+  border-radius: 0 !important;
 }
