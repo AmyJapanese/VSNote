@@ -1,9 +1,9 @@
 {
-  "name": "VScodian",
+  "name": "VSNote",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
-  "author": "亜美",
-  "authorUrl": "https://github.com/",
+  "author": "AmyJapanese",
+  "authorUrl": "https://github.com/AmyJapanese",
   "description": "A Visual Studio Code Dark+ inspired theme for Obsidian, blending the feel of coding with the flow of note-taking.",
   "isDesktopOnly": false
 }

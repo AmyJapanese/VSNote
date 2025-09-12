@@ -1,13 +1,13 @@
-# VSCodian Theme
+# VSNote Theme
 
-![VSCodian Theme Thumbnail](Assets/Thumbnail.png)
+![VSNote Theme Thumbnail](Assets/Thumbnail.png)
 
 > **Disclaimer:** This is an **unofficial** Obsidian theme inspired by Visual Studio Code.  
 > It is not affiliated with or endorsed by Microsoft or the Visual Studio Code team.
 
 ## Overview
 
-VSCodian brings the familiar look and feel of Visual Studio Code into Obsidian,  
+VSNote brings the familiar look and feel of Visual Studio Code into Obsidian,  
 combining the productivity of your favorite editor with the note-taking power of Obsidian.
 
 ### Features
@@ -28,8 +28,6 @@ combining the productivity of your favorite editor with the note-taking power of
   - RGB: (0, 122, 204)
 - The theme is designed for Obsidian’s built-in theme installer (“Community Themes”) —  
   no manual installation instructions are provided here.
-- “VScodian” is derived from “VS Code” + the suffix “-ian”.
-  It is not related to Obsidian or its official branding.
 - Works best with the default Obsidian UI layout.  
   Some heavily customized plugin layouts may need additional CSS adjustments.
 
@@ -43,10 +41,10 @@ You can easily tweak:
 
 ### 📜 License
 
-This theme is released under the MIT License.
+This theme is released under the [MIT License](License.txt).
 Visual Studio Code is a trademark of Microsoft.
 This project is not affiliated with, endorsed by, or sponsored by Microsoft in any way.
 
 ---
 
-Enjoy coding-style note-taking in Obsidian with VSCodian!
+Enjoy coding-style note-taking in Obsidian with VSNote!
