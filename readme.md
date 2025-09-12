@@ -18,6 +18,15 @@ combining the productivity of your favorite editor with the note-taking power of
 - **VS Code-style status bar** spanning the entire bottom edge.
 - Folder/file tree and icon tweaks to resemble the VS Code explorer.
 - Accent color customization via `--interactive-accent`.
+### Screenshots
+
+#### Dark Mode
+
+![VSNote Dark Mode Screenshot](Assets/darkmode.png)
+
+#### Light Mode
+
+![VSNote Light Mode Screenshot](Assets/lightmode.png)
 
 ### Notes
 
