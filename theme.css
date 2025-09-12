@@ -239,19 +239,21 @@ a.tag,
   font-family: var(--vsc-code-font);
 }
 
-/* スクロールバー全体 */
+/* 縦横スクロールバー全体 */
 ::-webkit-scrollbar {
-  width: 12px;  /* 太さ */
-  height: 12px; /* 横スクロール時の高さ */
+  width: 12px;   /* 横スクロールは高さになる */
+  height: 12px;
+  background: #1e1e1e; /* VSCodeっぽい背景色 */
 }
 
-/* スクロールバーのつまみ部分 */
+/* つまみ部分 */
 ::-webkit-scrollbar-thumb {
-  background-color: #555; /* 色は好きに */
-  border-radius: 0;       /* ← 角を丸めず四角に */
+  background-color: #424242;
+  border-radius: 0;         /* 四角に固定 */
+  border: 2px solid #1e1e1e; /* 背景と同じ色で枠を作ってVSCodeっぽく */
 }
 
-/* スクロールバーの背景 */
+/* スクロールバーの溝部分 */
 ::-webkit-scrollbar-track {
-  background: #222;
+  background: #1e1e1e;
 }
