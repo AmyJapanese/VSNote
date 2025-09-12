@@ -47,11 +47,9 @@ combining the productivity of your favorite editor with the note-taking power of
 
 ### Customization
 
-You can easily tweak:
-
-- **Accent color:** Edit the `--interactive-accent` variable in the theme CSS.
-- **Heading font:** Change the `--vsc-heading-font` variable to any monospaced font you like.
-- **Explorer icons:** Modify the folder/file icon rules in the CSS to match your taste.
+This theme uses Obsidian's built-in accent color system.  
+Scrollbar colors and highlights follow the accent color you select in **Settings → Appearance → Accent color**.  
+Direct CSS editing is not required or recommended.
 
 ### 📜 License
 
