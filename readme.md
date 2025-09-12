@@ -18,6 +18,11 @@ combining the productivity of your favorite editor with the note-taking power of
 - **VS Code-style status bar** spanning the entire bottom edge.
 - Folder/file tree and icon tweaks to resemble the VS Code explorer.
 - Accent color customization via `--interactive-accent`.
+
+### Limitations
+- Full reproduction of VS Code's square scrollbars is not possible due to Obsidian's reliance on native system scrollbars.  
+- This theme provides similar colors and overall feel, but scrollbar appearance may vary depending on your operating system.
+
 ### Screenshots
 
 #### Dark Mode
