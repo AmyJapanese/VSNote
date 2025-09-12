@@ -238,3 +238,20 @@ a.tag,
 .cm-hashtag {
   font-family: var(--vsc-code-font);
 }
+
+/* スクロールバー全体 */
+::-webkit-scrollbar {
+  width: 12px;  /* 太さ */
+  height: 12px; /* 横スクロール時の高さ */
+}
+
+/* スクロールバーのつまみ部分 */
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* 色は好きに */
+  border-radius: 0;       /* ← 角を丸めず四角に */
+}
+
+/* スクロールバーの背景 */
+::-webkit-scrollbar-track {
+  background: #222;
+}
