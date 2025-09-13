@@ -1,5 +1,8 @@
 # VSNote — A Visual Studio Dark replica for Obsidian
 > Bring your coding environment into your second brain.
+![GitHub stars](https://img.shields.io/github/stars/AmyJapanese/VSNote?style=flat-square)
+![GitHub downloads](https://img.shields.io/github/downloads/AmyJapanese/VSNote/total?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/AmyJapanese/VSNote?style=flat-square)
 
 ![VSNote Theme Thumbnail](Assets/Thumbnail.png)
 
