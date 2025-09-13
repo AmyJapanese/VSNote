@@ -1,4 +1,4 @@
-# VSNote Theme
+# VSNote — A Visual Studio Dark replica for Obsidian
 
 ![VSNote Theme Thumbnail](Assets/Thumbnail.png)
 
