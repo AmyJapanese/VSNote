@@ -30,6 +30,7 @@ combining the productivity of your favorite editor with the note-taking power of
 ### Limitations
 - Full reproduction of VS Code's square scrollbars is not possible due to Obsidian's reliance on native system scrollbars.  
 - This theme provides similar colors and overall feel, but scrollbar appearance may vary depending on your operating system.
+- Certain plugins (e.g. Novel Word Count in “below” mode) may cause layout overlap in the file explorer due to additional elements under filenames.
 
 ### Notes
 
@@ -65,6 +66,7 @@ Direct CSS editing is not required or recommended.
 - Additional color schemes (Quiet Light, Solarized, etc.)
 - Further UI refinements to improve Visual Studio Code fidelity
 - Support for popular Obsidian plugins to match VS Code aesthetics
+- Add a Style Settings option to enable “extra padding in file explorer” for plugins that insert content below filenames (to prevent layout collapse).
 
 ### 📜 License
 
