@@ -59,6 +59,13 @@ Direct CSS editing is not required or recommended.
 
 ![VSNote Light Mode Screenshot](Assets/lightmode.png)
 
+### 🚧 Future Works
+
+- Integration with **Style Settings** for easy customization
+- Additional color schemes (Quiet Light, Solarized, etc.)
+- Further UI refinements to improve Visual Studio Code fidelity
+- Support for popular Obsidian plugins to match VS Code aesthetics
+
 ### 📜 License
 
 This theme is released under the [MIT License](License.txt).
