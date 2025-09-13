@@ -2,6 +2,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/AmyJapanese/VSNote?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/AmyJapanese/VSNote?style=flat-square)
 > Bring your coding environment into your second brain.
+
 ![VSNote Theme Thumbnail](Assets/Thumbnail.png)
 
 ## Why VSNote?
