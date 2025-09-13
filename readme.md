@@ -1,6 +1,12 @@
 # VSNote — A Visual Studio Dark replica for Obsidian
+> Bring your coding environment into your second brain.
 
 ![VSNote Theme Thumbnail](Assets/Thumbnail.png)
+
+## Why VSNote?
+
+If you live in VS Code all day, switching to Obsidian can feel like a visual shock.  
+VSNote smooths the transition by making your notes look and feel like home.
 
 > **Disclaimer:** This is an **unofficial** Obsidian theme inspired by Visual Studio Code.  
 > It is not affiliated with or endorsed by Microsoft or the Visual Studio Code team.
@@ -59,4 +65,6 @@ This project is not affiliated with, endorsed by, or sponsored by Microsoft in a
 
 ---
 
-Enjoy coding-style note-taking in Obsidian with VSNote!
+Install it. Write like you’re coding.  
+VSNote is your dev brain's happy place.
+Happy noting! 🚀
