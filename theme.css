@@ -245,3 +245,35 @@ a.tag,
 .scrollbar {
   border-radius: 0 !important;
 }
+/* ライブプレビュー／ライブモードのアクティブ行 */
+.cm-active.cm-line {
+  background-color: rgba(200, 200, 200, 0.07);
+}
+
+/* 中央のタブだけ150px固定 */
+.workspace-tabs:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container {
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+}
+
+.workspace-tabs:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header {
+  flex: none !important;
+  width: 150px ;
+  min-width: 150px ;
+  max-width: 150px ;
+}
+
+.workspace-tabs:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-inner-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 左右ペインだけは制限解除 */
+.workspace .mod-left-split .workspace-tab-header,
+.workspace .mod-right-split .workspace-tab-header {
+  flex: 0 1 auto !important;
+  width: auto !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
