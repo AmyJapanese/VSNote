@@ -25,7 +25,6 @@ combining the productivity of your favorite editor with the note-taking power of
 - **Active tab underline** just like VS Code’s tab bar.
 - **VS Code-style status bar** spanning the entire bottom edge.
 - Folder/file tree and icon tweaks to resemble the VS Code explorer.
-- Accent color customization via `--interactive-accent`.
 
 ### Limitations
 - Full reproduction of VS Code's square scrollbars is not possible due to Obsidian's reliance on native system scrollbars.  
